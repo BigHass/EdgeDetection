@@ -54,6 +54,9 @@ image compression, image recognition, and other applications.
       * The MPI library
       * The stb_image_write library
 # Cmppiling and Running 
-* To compile the code, use the following command:
-   `mpic++ -std=c++17 -pthread main.cpp -o sobel`
+* To compile the code, use the following command: `mpic++ -std=c++17 -pthread main.cpp -o sobel`
+* To ren the code, use the following command: `mpirun -n [num_procs] ./sobel`
+* Note: Replace `[num_procs]` with the desired number of processes.
+# Additional Information
+* The stb_image_write library is used to write the output image in the Portable Network Graphics (PNG) format. The `image.h` and `sobel.h` files contain the Image class and the Sobel edge detection algorithm, respectively. The `threadArgs.h` file contains the ThreadArgs struct for passing arguments to threads. The `mpi_handler.h` file contains the MPIHandler class for handling MPI operations.
 
