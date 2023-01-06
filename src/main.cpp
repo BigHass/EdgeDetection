@@ -10,7 +10,7 @@
 int main(int argc, char *argv[]) {
 
     h2o::MPIHandler handler(argc, argv);
-
+    // Declares pointers to Image objects for the input and output images.
     h2o::Image::Ptr image1D;
     h2o::Image::Ptr convolvedImage;
 
