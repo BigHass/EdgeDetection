@@ -53,3 +53,8 @@ image compression, image recognition, and other applications.
       * A C++ compiler
       * The MPI library
       * The stb_image_write library
+# Cmppiling and Running 
+To compile the code, use the following command:
+'''
+mpic++ -std=c++17 -pthread main.cpp -o sobel
+'''
