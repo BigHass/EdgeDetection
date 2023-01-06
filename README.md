@@ -48,4 +48,8 @@ image compression, image recognition, and other applications.
 # MPI and Pthread 
 
 * This code is using the Message Passing Interface (MPI) library to perform parallel processing of an image using the Sobel edge detection algorithm. The input image is read in by the master process, then broadcast to all other processes. Each process receives a portion of the image and applies the Sobel algorithm on it in a separate thread. The resulting image slices are then gathered by the master process and combined to form the final output image, which is then written to a file. The stb_image_write library is used to write the output image in the Portable Network Graphics (PNG) format.
-    
+  
+# Requirements 
+      * A C++ compiler
+      * The MPI library
+      * The stb_image_write library
