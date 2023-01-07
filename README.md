@@ -59,4 +59,6 @@ image compression, image recognition, and other applications.
 * Note: Replace `[num_procs]` with the desired number of processes.
 # Additional Information
 * The stb_image_write library is used to write the output image in the Portable Network Graphics (PNG) format. The `image.h` and `sobel.h` files contain the Image class and the Sobel edge detection algorithm, respectively. The `threadArgs.h` file contains the ThreadArgs struct for passing arguments to threads. The `mpi_handler.h` file contains the MPIHandler class for handling MPI operations.
-
+<p align="center">
+      <img src="/assets/images/MPI and Thread.drawio.png" alt="MPI_Thread image">
+</p>
