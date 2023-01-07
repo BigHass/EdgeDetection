@@ -8,9 +8,9 @@
 namespace h2o {
 
     class Image {
-        int m_rows;
-        int m_columns;
-        std::vector<std::byte> m_data;
+        int m_rows; // The number of rows in the image.
+        int m_columns; // The number of columns in the image.
+        std::vector<std::byte> m_data; // The pixel data of the image.
 
 
     public:
@@ -27,7 +27,7 @@ namespace h2o {
 
             m_data.resize(m_rows * m_columns);
         }
-
+        // A shared pointer to an Image.
         using Ptr = std::shared_ptr<Image>;
 
         static Ptr empty(int rows, int columns) {
@@ -81,7 +81,7 @@ namespace h2o {
 
             return {m_data.data(), m_data.size()};
         }
-
+        // Returns a pointer to the pixel data of the image, allowing it to be modified.
         std::byte *mut_data() {
 
             return m_data.data();
