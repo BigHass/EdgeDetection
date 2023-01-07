@@ -52,13 +52,10 @@ image compression, image recognition, and other applications.
       <img src="/assets/images/MPI and Thread.drawio.png" alt="MPI_Thread image">
 </p>
 
-*The numbers in the image indicate to:
-      1. Broadcast image to all slaves.
-      2. Broadcast start index and end index for each process.
-      3. Spawn compute thread:
-            - Every thread computes from start to end.
-            - For every process wait for its compute thread.
-      4. Every process ends with its results.
+1. First item
+2. Second item
+3. Third item
+4. Fourth item
 # Requirements 
       * A C++ compiler
       * The MPI library
