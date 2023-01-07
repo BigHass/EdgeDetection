@@ -2,7 +2,7 @@
 // Created by mythi on 20/12/22.
 //
 
-#pragma once
+#pragma once // is a preprocessor directive that tells the compiler to include a header file only once in a single translation unit.
 
 #include <mpi.h>
 
@@ -17,7 +17,7 @@ namespace h2o {
             MPI_Comm_size(MPI_COMM_WORLD, &numOfProcs);
             MPI_Comm_rank(MPI_COMM_WORLD, &rank);
         }
-
+        // It is defined to call the 'MPI_Finalize()'
         ~MPIHandler() {
 
             MPI_Finalize();
