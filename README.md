@@ -48,17 +48,25 @@ image compression, image recognition, and other applications.
 # MPI and Pthread 
 
 * This code is using the Message Passing Interface (MPI) library to perform parallel processing of an image using the Sobel edge detection algorithm. The input image is read in by the master process, then broadcast to all other processes. Each process receives a portion of the image and applies the Sobel algorithm on it in a separate thread. The resulting image slices are then gathered by the master process and combined to form the final output image, which is then written to a file. The stb_image_write library is used to write the output image in the Portable Network Graphics (PNG) format.
-  
+<p align="center">
+      <img src="/assets/images/MPI and Thread.drawio.png" alt="MPI_Thread image">
+</p>
+
+*The numbers in the image indicate to:
+      1. Broadcast image to all slaves.
+      2. Broadcast start index and end index for each process.
+      3. Spawn compute thread:
+            - Every thread computes from start to end.
+            - For every process wait for its compute thread.
+      4. Every process ends with its results.
 # Requirements 
       * A C++ compiler
       * The MPI library
       * The stb_image_write library
-# Cmppiling and Running 
+# Compiling and Running 
 * To compile the code, use the following command: `mpic++ -std=c++17 -pthread main.cpp -o sobel`
 * To ren the code, use the following command: `mpirun -n [num_procs] ./sobel`
 * Note: Replace `[num_procs]` with the desired number of processes.
 # Additional Information
 * The stb_image_write library is used to write the output image in the Portable Network Graphics (PNG) format. The `image.h` and `sobel.h` files contain the Image class and the Sobel edge detection algorithm, respectively. The `threadArgs.h` file contains the ThreadArgs struct for passing arguments to threads. The `mpi_handler.h` file contains the MPIHandler class for handling MPI operations.
-<p align="center">
-      <img src="/assets/images/MPI and Thread.drawio.png" alt="MPI_Thread image">
-</p>
+
