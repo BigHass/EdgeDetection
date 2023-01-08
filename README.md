@@ -30,6 +30,8 @@
 
 * By convolving the image with both of these kernels, we can detect edges in both the horizontal and vertical directions.
 
+* The gradient images produced by convolving the image with the Sobel kernels gx and gy represent the approximate horizontal and vertical derivatives of the image, respectively. The magnitude of the gradient at each pixel is then computed as the square root of the sum of the squares of these gradient images `square root of ((gx)^2+(gy)^2)`. This gives a measure of the strength of the edge at each pixel.
+
 # Convolution Process
 
 * In image processing, convolution is a mathematical operation that is used to modify the intensity values of pixels in an image. It involves multiplying 
@@ -87,4 +89,6 @@ image compression, image recognition, and other applications.
 * Note: Replace `[num_procs]` with the desired number of processes.
 # Additional Information
 * The stb_image_write library is used to write the output image in the Portable Network Graphics (PNG) format. The `image.h` and `sobel.h` files contain the Image class and the Sobel edge detection algorithm, respectively. The `threadArgs.h` file contains the ThreadArgs struct for passing arguments to threads. The `mpi_handler.h` file contains the MPIHandler class for handling MPI operations.
+    
+
     
