@@ -11,7 +11,7 @@
             <img src="/assets/images/edgeDetection.png" alt="edgeDetection image">
       </p>
 
-# Soble Filter
+# Sobel Filter
 * The Sobel operator convolves the image with two 3x3 kernels, one for horizontal changes and one for vertical changes, to approximate the derivatives in each direction.
    ```sh
       [-1  0  1]
